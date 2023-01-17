@@ -1,0 +1,48 @@
+.school {
+    margin-top: 0;
+    width: 100%;
+}
+
+.school-degree {
+    font-size: 14pt;
+    font-weight: 700;
+    width: fit-content;
+    position: relative;
+}
+
+.school-degree::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 2px solid black;
+    opacity: 0.5;
+}
+
+.school-info {
+    display: flex;
+    white-space: pre;
+    width: fit-content;
+}
+
+.school-title {
+    font-size: 12pt;
+    font-weight: 700;
+    width: fit-content;
+    position: relative;
+}
+
+.school-date {
+    font-size: 10pt;
+}
+
+.school-description {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: 12pt;
+    margin-bottom: 0.2cm;
+    width: 100%;
+}

@@ -1,0 +1,51 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 0.5cm;
+    margin-bottom: 1cm;
+}
+
+.left-title,
+.right-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2cm;
+    width: fit-content;
+}
+
+.title-input {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    font-size: 12pt;
+    padding: 0;
+    width: min-content;
+}
+
+.title-name {
+    font-size: 15pt;
+    font-weight: 700;
+}
+
+.title-location {
+    color: grey;
+}
+
+.title-phone {
+    color: var(--special-text-clr);
+    text-align: end;
+}
+
+.title-email {
+    color: blue;
+    text-align: end;
+}
+.title::after {
+    content: "";
+    width: 100%;
+    border-bottom: 2px solid black;
+    position: absolute;
+    bottom: 0;
+}

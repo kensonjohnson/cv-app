@@ -1,0 +1,11 @@
+.experience {
+    position: relative;
+}
+
+.experience::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 2px solid black;
+}

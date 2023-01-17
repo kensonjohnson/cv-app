@@ -1,0 +1,54 @@
+.job {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.1cm;
+    position: relative;
+    margin: 0.4cm 0;
+}
+
+.job-header {
+    display: flex;
+    gap: 0.5cm;
+    position: relative;
+    width: fit-content;
+}
+
+.job-title {
+    font-size: 14pt;
+    font-weight: 700;
+}
+
+.job-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 2px solid black;
+    opacity: 0.5;
+}
+
+.job-location {
+    display: flex;
+    font-size: 11pt;
+    white-space: pre;
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+.job-dates {
+    display: flex;
+    white-space: pre;
+    font-size: 10pt;
+    width: 5cm;
+}
+
+.job-description {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: 12pt;
+    margin-bottom: 0.2cm;
+}
