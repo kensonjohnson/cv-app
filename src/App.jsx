@@ -31,7 +31,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
-const analytics = getAnalytics(app)
 const database = getDatabase(app)
 
 const localCopy = recalLocalStorage()
@@ -48,7 +47,7 @@ function App() {
             get(child(ref(database), user.uid))
                 .then((snapshot) => {
                     if (snapshot.exists()) {
-                        const storedResume = JSON.parse(snapshot.val())
+                        const storedResume = snapshot.val()
                         setTitleInfo(storedResume.titleInfo)
                         setObjective(storedResume.objective)
                         setExperience(storedResume.experience)
@@ -123,7 +122,7 @@ function storeLocal(titleInfo, objective, experience, education) {
 }
 
 function storeCloudDatabase(userId, resume) {
-    set(ref(database, userId), JSON.stringify(resume))
+    set(ref(database, userId), resume)
 }
 
 export default App
