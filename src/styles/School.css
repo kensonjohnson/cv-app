@@ -4,6 +4,7 @@
 }
 
 .school-degree {
+    display: flex;
     font-size: 14pt;
     font-weight: 700;
     width: fit-content;
@@ -20,10 +21,15 @@
     opacity: 0.5;
 }
 
+.school-degree-field {
+    font-size: 14pt;
+    font-weight: 700;
+}
+
 .school-info {
     display: flex;
     white-space: pre;
-    width: fit-content;
+    width: min-content;
 }
 
 .school-title {

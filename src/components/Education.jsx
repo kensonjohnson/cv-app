@@ -24,6 +24,7 @@ export function Education(props) {
                         school={school}
                         key={school.key}
                         handleUpdate={handleUpdate}
+                        education={education}
                     />
                 )
             })}
