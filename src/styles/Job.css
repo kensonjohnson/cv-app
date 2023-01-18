@@ -9,14 +9,9 @@
 
 .job-header {
     display: flex;
-    gap: 0.5cm;
     position: relative;
-    width: fit-content;
-}
-
-.job-title {
-    font-size: 14pt;
-    font-weight: 700;
+    width: min-content;
+    white-space: pre;
 }
 
 .job-header::after {
@@ -28,13 +23,31 @@
     border-bottom: 2px solid black;
     opacity: 0.5;
 }
-
+.job-title {
+    display: flex;
+    font-size: 14pt;
+    font-weight: 700;
+    opacity: 1;
+}
+.job-title-field {
+    font-size: 15pt;
+    font-weight: 700;
+    width: max-content;
+}
 .job-location {
     display: flex;
     font-size: 11pt;
-    white-space: pre;
     opacity: 0.5;
     font-weight: 600;
+}
+
+.job-location-city,
+.job-location-state {
+    color: black;
+    width: max-content;
+}
+.job-location-state {
+    padding-right: 2px;
 }
 
 .job-dates {

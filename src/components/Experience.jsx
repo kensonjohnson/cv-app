@@ -16,7 +16,6 @@ export function Experience(props) {
         }
         setExperience(changedExperience)
     }
-
     return (
         <div className="experience">
             <h2>Experience</h2>

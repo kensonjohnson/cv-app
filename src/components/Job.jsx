@@ -20,7 +20,7 @@ export function Job(props) {
         })
         if (findUpdatedJob.length === 1) {
             const newJob = findUpdatedJob[0]
-            setJobTitle(newJob.title)
+            setJobTitle(newJob.jobTitle)
             setLocation(newJob.location)
             setDateStart(newJob.dateStart)
             setDateEnd(newJob.dateEnd)
@@ -31,19 +31,21 @@ export function Job(props) {
     return (
         <div className="job">
             <div className="job-header">
-                <AutoGrowInput
-                    value={jobTitle}
-                    className="job-title"
-                    onBlur={() => {
-                        handleUpdate(job.key, { jobTitle })
-                    }}
-                    onChange={(e) => {
-                        setJobTitle(e.target.value)
-                    }}
-                />
+                <div>
+                    <AutoGrowInput
+                        value={jobTitle}
+                        className="job-title-field"
+                        onBlur={() => {
+                            handleUpdate(job.key, { jobTitle })
+                        }}
+                        onChange={(e) => {
+                            setJobTitle(e.target.value)
+                        }}
+                    />{" "}
+                </div>
                 <div className="job-location">
                     <AutoGrowInput
-                        className="notUsed"
+                        className="job-location-city"
                         value={location.city}
                         onBlur={() => {
                             handleUpdate(job.key, { location })
@@ -57,7 +59,7 @@ export function Job(props) {
                     />
                     {", "}
                     <AutoGrowInput
-                        className="notUsed"
+                        className="job-location-state"
                         value={location.state}
                         onBlur={() => {
                             handleUpdate(job.key, { location })

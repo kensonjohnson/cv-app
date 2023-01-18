@@ -1,5 +1,7 @@
 .experience {
     position: relative;
+    margin-bottom: 1cm;
+    padding-bottom: 0.1cm;
 }
 
 .experience::after {
