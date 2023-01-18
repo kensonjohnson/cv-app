@@ -4,7 +4,6 @@ import { AutoGrowInput } from "./AutoGrowInput"
 
 export function Title(props) {
     const { titleInfo, setTitleInfo } = props
-   
 
     const [fullName, setFullName] = useState(titleInfo.fullName)
     const [location, setLocation] = useState(titleInfo.location)
@@ -18,20 +17,22 @@ export function Title(props) {
         setEmail(titleInfo.email)
     }, [titleInfo])
 
+    const handleUpdate = () => {
+        setTitleInfo({
+            fullName,
+            location,
+            phone,
+            email,
+        })
+    }
+
     return (
         <div className="title">
             <div className="left-title">
                 <AutoGrowInput
                     className="title-name"
                     value={fullName}
-                    onBlur={(e) => {
-                        setTitleInfo({
-                            fullName: e.target.value,
-                            location,
-                            phone,
-                            email,
-                        })
-                    }}
+                    onBlur={handleUpdate}
                     onChange={(e) => {
                         setFullName(e.target.value)
                     }}
@@ -40,14 +41,7 @@ export function Title(props) {
                 <AutoGrowInput
                     className="title-location"
                     value={location}
-                    onBlur={(e) => {
-                        setTitleInfo({
-                            fullName,
-                            location: e.target.value,
-                            phone,
-                            email,
-                        })
-                    }}
+                    onBlur={handleUpdate}
                     onChange={(e) => {
                         setLocation(e.target.value)
                     }}
@@ -57,14 +51,7 @@ export function Title(props) {
                 <AutoGrowInput
                     className="title-phone"
                     value={phone}
-                    onBlur={(e) => {
-                        setTitleInfo({
-                            fullName,
-                            location,
-                            phone: e.target.value,
-                            email,
-                        })
-                    }}
+                    onBlur={handleUpdate}
                     onChange={(e) => {
                         setPhone(e.target.value)
                     }}
@@ -73,14 +60,7 @@ export function Title(props) {
                 <AutoGrowInput
                     className="title-email"
                     value={email}
-                    onBlur={(e) => {
-                        setTitleInfo({
-                            fullName,
-                            location,
-                            phone,
-                            email: e.target.value,
-                        })
-                    }}
+                    onBlur={handleUpdate}
                     onChange={(e) => {
                         setEmail(e.target.value)
                     }}
