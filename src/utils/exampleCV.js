@@ -40,18 +40,18 @@ export const exampleCV = {
         {
             key: "school1",
             schoolName: "Some School",
-            degreeName: "BS of Applied BS",
+            degreeName: "BS of Applied Science",
             dateCompleted: "Jan 2016",
             schoolDescription:
-                "Add a short description of the school. \nEach line has a maximum character length of 95. \nUse up to 3 lines",
+                "Add a short description of the school. \nEach line has a maximum character length of 95. Use up to 3 lines",
         },
         {
             key: "school2",
             schoolName: "Some School",
-            degreeName: "AS of Applied BS",
+            degreeName: "AS of Applied Science",
             dateCompleted: "Jan 2014",
             schoolDescription:
-                "Add a short description of the school. \nEach line has a maximum character length of 95. \nUse up to 3 lines",
+                "Add a short description of the school. \nEach line has a maximum character length of 95. Use up to 3 lines",
         },
     ],
 }
