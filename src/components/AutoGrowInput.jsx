@@ -2,6 +2,13 @@ import React from "react"
 
 export function AutoGrowInput(props) {
     const { className, value, onChange, onBlur } = props
+    const handleLoseFocus = (e) => {
+        if (e.target.value === "") {
+            e.target.value = value
+        } else {
+            onBlur()
+        }
+    }
     return (
         <div
             style={{
@@ -11,9 +18,12 @@ export function AutoGrowInput(props) {
             }}
         >
             <input
+                onFocus={(e) => {
+                    e.target.value = ""
+                }}
                 value={value}
                 onChange={onChange}
-                onBlur={onBlur}
+                onBlur={handleLoseFocus}
                 style={{
                     gridArea: "1 / 1 / 2 / 2",
                     width: "100%",
