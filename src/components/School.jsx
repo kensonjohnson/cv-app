@@ -46,7 +46,7 @@ export function School(props) {
             </div>
             <textarea
                 className="school-description"
-                rows={3}
+                rows={2}
                 cols={99}
                 defaultValue={schoolDescription}
                 onBlur={(e) => {
@@ -54,7 +54,7 @@ export function School(props) {
                     handleUpdate(school.key, { schoolDescription })
                 }}
                 onKeyDown={(e) => {
-                    restrictInput(e, 3, 95)
+                    restrictInput(e, 2, 95)
                 }}
             />
         </div>
